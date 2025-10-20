@@ -15,6 +15,11 @@ public class Aplicacion1 {
         int cantidadPalabras = sc.nextInt();
         sc.nextLine();
 
+        if (cantidadPalabras < 1) {
+            System.err.println("ERROR");
+            return;
+        }
+
         for (int i = 0; i < cantidadPalabras; i++) {
             System.out.println("Ingrese palabra " + (i + 1) + ": ");
             cadena.append(sc.nextLine()).append(" ");

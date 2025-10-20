@@ -9,7 +9,7 @@ public class Aplicacion2 {
             return;
         }
         String nombreFichero = args[0];
-        int mayorTemperatura = 0;
+        int mayorTemperatura = Integer.MIN_VALUE;
         String mayorDiaTemperatura = null;
         int temperatura = 0;
 

@@ -23,7 +23,7 @@ public class MiniCalc {
                 break;
             case '/':
                 if (num2 == 0) {
-                    System.out.println("No se puede dividir por cero");
+                    System.err.println("No se puede dividir por cero");
                     return;
                 }
                 resultado = num1 / num2;
