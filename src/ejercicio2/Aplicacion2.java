@@ -9,6 +9,15 @@ public class Aplicacion2 {
             System.err.println("Error: no argumentos");
             return;
         }
+        StringBuilder cadenaRecibida = crearCadena(args);
+        String[] palabrasArray = cadenaRecibida.toString().trim().split(" ");
+        Arrays.sort(palabrasArray, Collections.reverseOrder());
+
+        StringBuilder ordenada = crearCadena(palabrasArray);
+        System.out.println(ordenada.toString());
+    }
+
+    private static StringBuilder crearCadena(String[] args) {
         StringBuilder cadenaRecibida = new StringBuilder();
         for (int i = 0; i < args.length; i++) {
             cadenaRecibida.append(args[i]);
@@ -16,16 +25,6 @@ public class Aplicacion2 {
                 cadenaRecibida.append(" ");
             }
         }
-        String[] palabrasArray = cadenaRecibida.toString().trim().split(" ");
-        Arrays.sort(palabrasArray, Collections.reverseOrder());
-
-        StringBuilder ordenada = new StringBuilder();
-        for (int i = 0; i < palabrasArray.length; i++) {
-            ordenada.append(palabrasArray[i]);
-            if (i < palabrasArray.length - 1) {
-                ordenada.append(" ");
-            }
-        }
-        System.out.println(ordenada.toString());
+        return cadenaRecibida;
     }
 }

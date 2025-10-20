@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Aplicacion2 {
     public static void main(String[] args) {
@@ -30,7 +32,7 @@ public class Aplicacion2 {
         int mayor2 = entrada.get(1);
 
         int menor = Collections.min(entrada);
-
+        Map<Integer,Integer> repeticiones = new HashMap<>();
         for(int num : entrada){
             suma += num;
         }
@@ -53,12 +55,10 @@ public class Aplicacion2 {
                 repetido = entrada.get(i);
             }
         }
-
         System.out.println("Mayor: " + mayor);
         System.out.println("Mayor2: " + mayor2);
         System.out.println("Menor: " + menor);
         System.out.println("Media: " + media);
         System.out.println("Repetido: " + repetido);
-
     }
 }
